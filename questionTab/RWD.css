@@ -10,14 +10,35 @@
 @media screen and (max-width: 425px){
     :root {
         --fontSize: 7px;
-        --contentPadding: 3%;
+        --contentPadding: 5%;
+
+        --indexTagHight: 20%;
+        --indexTagWidth: 8%;
     }
     .Card_wrapper {
-        width: 100%;
+        width: 90%;
         max-width: none;
 
         height: 100%;
         min-height: auto;   
+    }
+
+    .Card-question:nth-child(2) { clip-path: polygon(var(--indexTagWidth) 0, var(--indexTagWidth) var(--indexTagHight), 0 var(--indexTagHight), 0 100%, 100% 100%, 100% 0); }
+    .Card-question:nth-child(3) { clip-path: polygon(var(--indexTagWidth) 0, var(--indexTagWidth) calc(var(--indexTagHight) * 2), 0 calc(var(--indexTagHight) * 2), 0 100%, 100% 100%, 100% 0); }
+    .Card-question:nth-child(4) { clip-path: polygon(var(--indexTagWidth) 0, var(--indexTagWidth) calc(var(--indexTagHight) * 3), 0 calc(var(--indexTagHight) * 3), 0 100%, 100% 100%, 100% 0); }
+    .Card-question:nth-child(5) { clip-path: polygon(var(--indexTagWidth) 0, var(--indexTagWidth) calc(var(--indexTagHight) * 4), 0 calc(var(--indexTagHight) * 4), 0 100%, 100% 100%, 100% 0); }
+
+    .Card-question:nth-child(2) .Card_index{ left: 0; top: var(--indexTagHight); }
+    .Card-question:nth-child(3) .Card_index{ left: 0; top: calc(var(--indexTagHight) * 2); }
+    .Card-question:nth-child(4) .Card_index{ left: 0; top: calc(var(--indexTagHight) * 3); }
+    .Card-question:nth-child(5) .Card_index{ left: 0; top: calc(var(--indexTagHight) * 4); }
+
+    .Card_content{
+        width: calc(100% - var(--indexTagWidth));
+        padding: var(--contentPadding);
+    
+        top: 0;
+        left: var(--indexTagWidth);
     }
 }
 
