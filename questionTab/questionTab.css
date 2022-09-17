@@ -13,6 +13,7 @@
     --fontSize: 10px;
 
     --indexTagHight: 10%;
+    --indexTagWidth: 20%;
 
     --contentPadding: 2%;
 }
@@ -51,6 +52,8 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    overflow: hidden;
 }
 
 .Card_wrapper {
@@ -69,9 +72,9 @@ p {
     width: 100%;
     height: 100%;
     
+    border-radius: 8px;
     position: absolute;
 
-    border-radius: 8px;
     transition: transform var(--translateSpeed);
 }
 .Card-question:nth-child(1){
@@ -80,22 +83,22 @@ p {
 }
 .Card-question:nth-child(2) {
     background-color: var(--card2Color);
-    clip-path: polygon(0% var(--indexTagHight), 20% var(--indexTagHight), 20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% var(--indexTagHight), var(--indexTagWidth) var(--indexTagHight), calc(var(--indexTagWidth)) 0%, 100% 0%, 100% 100%, 0% 100%);
     transform: translateY(100%);
 }
 .Card-question:nth-child(3){
     background-color: var(--card3Color);
-    clip-path: polygon(0% var(--indexTagHight), 40% var(--indexTagHight), 40% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% var(--indexTagHight),  calc(var(--indexTagWidth) * 2) var(--indexTagHight), calc(var(--indexTagWidth) * 2) 0%, 100% 0%, 100% 100%, 0% 100%);
     transform: translateY(100%);
 }
 .Card-question:nth-child(4){
     background-color: var(--card4Color);
-    clip-path: polygon(0% var(--indexTagHight), 60% var(--indexTagHight), 60% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% var(--indexTagHight), calc(var(--indexTagWidth) * 3) var(--indexTagHight), calc(var(--indexTagWidth) * 3) 0%, 100% 0%, 100% 100%, 0% 100%);
     transform: translateY(100%);
 }
 .Card-question:nth-child(5){
     background-color: var(--card5Color);
-    clip-path: polygon(0% var(--indexTagHight), 80% var(--indexTagHight), 80% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% var(--indexTagHight), calc(var(--indexTagWidth) * 4) var(--indexTagHight), calc(var(--indexTagWidth) * 4) 0%, 100% 0%, 100% 100%, 0% 100%);
     transform: translateY(100%);
 }
 
@@ -110,7 +113,7 @@ p {
 .Card_text { margin-top: 1.5%; }
 
 .Card_index {
-    width: 20%;
+    width: var(--indexTagWidth);
     height: var(--indexTagHight);
 
     display: flex;
@@ -121,10 +124,10 @@ p {
     cursor: pointer;
 }
 .Card-question:nth-child(1) .Card_index{ left: 0%;  }
-.Card-question:nth-child(2) .Card_index{ left: 20%; }
-.Card-question:nth-child(3) .Card_index{ left: 40%; }
-.Card-question:nth-child(4) .Card_index{ left: 60%; }
-.Card-question:nth-child(5) .Card_index{ left: 80%; }
+.Card-question:nth-child(2) .Card_index{ left: var(--indexTagWidth); }
+.Card-question:nth-child(3) .Card_index{ left: calc(var(--indexTagWidth) * 2); }
+.Card-question:nth-child(4) .Card_index{ left: calc(var(--indexTagWidth) * 3); }
+.Card-question:nth-child(5) .Card_index{ left: calc(var(--indexTagWidth) * 4); }
 
 .Btn-nextTab {
     background-color: var(--NextTabBtnBGC);
