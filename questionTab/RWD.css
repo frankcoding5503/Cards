@@ -1,0 +1,44 @@
+@media screen and (max-width: 1366px){
+
+}
+@media screen and (max-width: 768px){
+    :root {
+        --fontSize: 8px;
+        --indexTagHight: 5%;
+    }
+}
+@media screen and (max-width: 425px){
+    :root {
+        --fontSize: 7px;
+        --contentPadding: 3%;
+    }
+    .Card_wrapper {
+        width: 100%;
+        max-width: none;
+
+        height: 100%;
+        min-height: auto;   
+    }
+}
+
+@media (orientation:landscape) {
+    @media screen and (max-height: 768px){
+        :root {
+            --fontSize: 8px;
+            --indexTagHight: 10%;
+        }
+        .Card_wrapper {
+            width: 100%;
+            max-width: none;
+
+            height: 100%;
+            min-height: auto;     
+        }
+    }
+    @media screen and (max-height: 425px){
+        :root {
+            --fontSize: 7px;
+            --contentPadding: 3%;
+        }
+    }
+}
