@@ -19,6 +19,10 @@
         height: 40%;
         min-height: 550px;
     }
+    .Btn-nextTab {
+        bottom: 30px;
+        right: 50px;
+    }
 
     .Card-question:nth-child(2) { clip-path: polygon(var(--indexTagWidth) 0, var(--indexTagWidth) var(--indexTagHight), 0 var(--indexTagHight), 0 100%, 100% 100%, 100% 0); }
     .Card-question:nth-child(3) { clip-path: polygon(var(--indexTagWidth) 0, var(--indexTagWidth) calc(var(--indexTagHight) * 2), 0 calc(var(--indexTagHight) * 2), 0 100%, 100% 100%, 100% 0); }
