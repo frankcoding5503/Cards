@@ -133,8 +133,8 @@ p {
     background-color: var(--NextTabBtnBGC);
     
     position: absolute;
-    bottom: 30px;
-    right: 50px;
+    bottom: 70px;
+    right: 100px;
 
     cursor: pointer;
 }
